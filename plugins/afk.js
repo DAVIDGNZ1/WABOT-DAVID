@@ -3,11 +3,15 @@ let handler = (m, { text }) => {
   user.afk = + new Date
   user.afkReason = text
   m.reply(`
-${conn.getName(m.sender)} is now AFK${text ? ': ' + text : ''}
+*「 AFK MODE 」*
+
+${conn.getName(m.sender)} Sekarang sedang AFK!
+
+Alasan : ${text ? '' + text : ''}
 `)
 }
-handler.help = ['afk [alasan]']
-handler.tags = ['main']
+handler.help = ['afk <alasan>']
+handler.tags = ['group']
 handler.command = /^afk$/i
 
 module.exports = handler
