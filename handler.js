@@ -15,7 +15,7 @@ module.exports = {
         let user
         if (user = global.DATABASE._data.users[m.sender]) {
           if (!isNumber(user.exp)) user.exp = 0
-          if (!isNumber(user.limit)) user.limit = 10
+          if (!isNumber(user.limit)) user.limit = 100
           if (!isNumber(user.lastclaim)) user.lastclaim = 0
           if (!'registered' in user) user.registered = false
           if (!user.registered) {
@@ -30,8 +30,8 @@ module.exports = {
           if (!'autolevelup' in user) user.autolevelup = false
         } else global.DATABASE._data.users[m.sender] = {
           exp: 0,
-          limit: 10,
-          lastclaim: 0,
+          limit: 1000,
+          lastclaim: 30000,
           registered: false,
           name: this.getName(m.sender),
           age: -1,
