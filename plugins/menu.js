@@ -82,6 +82,12 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
 ┏ ${conn.user.name} 
 │ Hai, %name!
 │
+│Folow IG Owner: Shopgame_david_1
+│YT : Lom Ada 
+│Whatsapp :wa.me/6287880120452
+│Suport Truss Owner Bot Yh :)
+┗----------( *Felicia Bot* ]
+┏------------------------------
 │ Tersisa *%limit Limit*
 │ Level *%level (%exp / %maxexp)* [%xp4levelup lagi untuk levelup]
 │ %totalexp XP in Total
@@ -91,8 +97,9 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
 │
 │ Uptime: *%uptime (%muptime)*
 │ Database: %rtotalreg of %totalreg
-│ Github:
-│ %github
+│ Github:https://github.com/DAVIDGNZ1/WABOT-DAVID/edit/main/plugins/menu.js
+│ Donasi : 1%
+│ Not Donasi :99% :(
 ┗--------------------------
 %readmore`
     let header = conn.menu.header || '┏ %category 」'
