@@ -1,28 +1,14 @@
-// Jangan Asal Ngubah Wehh :v
-//JAN HAPUS TQTQ NYA GOBLOG
-//GWA SUSAH SUSAH NGEFIX LU NYA MALAH HAPUS
-
-let fetch = require('node-fetch');
-let ftype = require('file-type');;
-let { MessageType, mentionedJid } = require('@adiwajshing/baileys')
 let fs = require ('fs')
 let path = require('path')
+let levelling = require('../lib/levelling')
 let handler  = async (m, { conn, usedPrefix: _p }) => {
-let RendyGanteng = conn
-  await RendyGanteng.fakeReply(m.chat, 'Loading...', '0@s.whatsapp.net', '*BY RENDY GANS*')
-  let RendyGans = './src/avatar_contact.png'
-  let nomor = 'Wa.me/6287880120452'
-  let sosmed = 'RC047'
-  let jadwal = 'Kadang Kadang Doang'
-  let github = 'https://github.com/RC047/Kuhong-V4'
-  let linkgroup = Lagi Bikin Grup :)
   try {
-    RendyGans = await RendyGanteng.getProfilePicture(conn.user.jid)
     let package = JSON.parse(fs.readFileSync(path.join(__dirname, '../package.json')))
-    let exp = global.DATABASE.data.users[m.sender].exp
-    let limit = global.DATABASE.data.users[m.sender].limit
-    let name = RendyGanteng.getName(m.sender)
+    let { exp, limit, level } = global.DATABASE.data.users[m.sender]
+    let { min, xp, max } = levelling.xpRange(level, global.multiplier)
+    let name = conn.getName(m.sender)
     let d = new Date
+    let pp = './img/avatar_contact.png'
     let locale = 'id'
     let gmt = new Date(0).getTime() - new Date('1 January 1970').getTime()
     let weton = ['Pahing', 'Pon','Wage','Kliwon','Legi'][Math.floor(((d * 1) + gmt) / 84600000) % 5]
