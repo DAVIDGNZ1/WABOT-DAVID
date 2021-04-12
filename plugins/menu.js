@@ -8,7 +8,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     let { min, xp, max } = levelling.xpRange(level, global.multiplier)
     let name = conn.getName(m.sender)
     let d = new Date
-    let pp = './img/menu.jpg'
+    let pp = './src/avatar_contact.png'
     let locale = 'id'
     let gmt = new Date(0).getTime() - new Date('1 January 1970').getTime()
     let weton = ['Pahing', 'Pon','Wage','Kliwon','Legi'][Math.floor(((d * 1) + gmt) / 84600000) % 5]
@@ -141,7 +141,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).join`|`})`, 'g'), (_, name) => ''+replace[name])
     conn.reply(m.chat, text.trim(), m)
-    coon.reply.sendFile(m.chat, RendyGans, 'RendyGans.jpg', text.trim(), m)
+    conn.sendFile (m.chat, pp, 'pp.jpg', text.trim())
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
