@@ -1,6 +1,6 @@
 let handler = m => m.reply('Tq|Terimakasih|Trmksh')
 
-handler.customPrefix = /Sama² %name/i
+handler.customPrefix = /Sama - BANGSAT☺/i
 handler.command = new RegExp
 
 module.exports = handler
