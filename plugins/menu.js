@@ -79,28 +79,29 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     }
     conn.menu = conn.menu ? conn.menu : {}
     let before = conn.menu.before || `
-┏ [ *DATA NEGARA SASUKE BOT* ]
-│ 
-│❒• *NAMA* : *%name*
-│❒• *EXP*     : *%exp XP*
-│❒• *LIMIT    : *%limit Limit*
-│❒•*LEVEL*  : *%level (%exp / %maxexp)*
-│❒• *Prefik*  : MultiPrefix
-│❒• DONASI YE
-│
-┗------------------------
-
-┏  [ *SOSMED* ]
-│
-├─ *❒• Instagram : *Shopgame_david_1*
-├─ *❒•YouTube : DavidBot
-├─ *❒•Whatsapp :wa.me/6287880120452*
-│
-┗---------
+╔═══ [ *DATA NEGARA SASUKE BOT* ]
+║ 
+║❒• *NAMA* : *%name*
+║❒• *EXP*     : *%exp XP*
+║❒• *LIMIT    : *%limit Limit*
+║❒•*LEVEL*  : *%level (%exp / %maxexp)*
+║❒• *Prefik*  : MultiPrefix
+║❒• DONASI YE
+║
+╚════════
+%readmore`
+╔═══ [ *SOSMED* ]
+║
+║➵ *❒• Instagram : *Shopgame_david_1*
+║➵ *❒•YouTube : DavidBot
+║➵ *❒ FACEBOK* : ......
+║
+╚════════
 
 ┏ [ *WAKTU* ]
 │
-│ *TANGGAL*       : *%week %weton, %date*
+│ *TANGGAL*       : *%week %weton**
+│ *TANGGAL*       : *%date*
 │ *Online*        : *%uptime (%muptime)*
 │ *JAM*           : *%time*
 │
