@@ -8,7 +8,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     let { min, xp, max } = levelling.xpRange(level, global.multiplier)
     let name = conn.getName(m.sender)
     let d = new Date
-    let pp = './src/avatar_contact.png'
+    let pp = './img/Menu.jpg'
     let locale = 'id'
     let gmt = new Date(0).getTime() - new Date('1 January 1970').getTime()
     let weton = ['Pahing', 'Pon','Wage','Kliwon','Legi'][Math.floor(((d * 1) + gmt) / 84600000) % 5]
@@ -79,7 +79,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     }
     conn.menu = conn.menu ? conn.menu : {}
     let before = conn.menu.before || `
-┏ [ *DATA NEGARA DAVID BOT* ]
+┏ [ *DATA NEGARA SASUKE BOT* ]
 │ 
 │❒• *NAMA* : *%name*
 │❒• *EXP*     : *%exp XP*
@@ -94,25 +94,25 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
 │
 ├─ *❒• Instagram : *Shopgame_david_1*
 ├─ *❒•YouTube : DavidBot
-├─*❒•Whatsapp :wa.me/6287880120452*
+├─ *❒•Whatsapp :wa.me/6287880120452*
 │
-┗----------[ *DAVID Bot* ]
+┗---------
 
-┏ [ WAKTU ]
+┏ [ *WAKTU* ]
 │
 │ *TANGGAL*       : *%week %weton, %date*
 │ *Online*        : *%uptime (%muptime)*
 │ *JAM*           : *%time*
 │
-┗----------[ *DAVID Bot* ]
+┗----------
 
-┏ [ GRUP ]
-│ https://chat.whatsapp.com/EY0BzXwdV1PKAQQggsDzrU
+┏ [ SC ORI ]
+│ https://github.com/narutomo/wabot-aq
 ┗--------------------------
 %readmore`
-    let header = conn.menu.header || '┏ %category 」'
-    let body   = conn.menu.body   || '├─ %cmd%islimit'
-    let footer = conn.menu.footer || '㋣\n'
+    let header = conn.menu.header || '╔═══ %category 」'
+    let body   = conn.menu.body   || '║➵ %cmd%islimit'
+    let footer = conn.menu.footer || '╚═══\n'
     let after  = conn.menu.after  || (conn.user.jid == global.conn.user.jid ? '' : `Powered by https://wa.me/${global.conn.user.jid.split`@`[0]}`) + `\n*%npmname@^%version*\n\`\`\`\%npmdesc\`\`\``
     let _text  = before + '\n'
     for (let tag in groups) {
